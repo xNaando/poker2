@@ -4,7 +4,7 @@ import base64
 
 app = Flask(__name__)
 
-OPENROUTER_API_KEY = "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"
+OPENROUTER_API_KEY = "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"
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 MODEL = "meta-llama/llama-4-maverick:free"
 

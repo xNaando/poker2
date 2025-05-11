@@ -110,7 +110,8 @@ class App(QWidget):
                 self.resposta_card.show()
             else:
                 erro = resp.json().get('erro', 'Erro desconhecido')
-                self.resposta_card.setText(f'Erro: {erro}')
+                detalhe = resp.json().get('detalhe', '')
+                self.resposta_card.setText(f'Erro: {erro}\n\nDetalhe: {detalhe}')
                 self.resposta_card.show()
         except Exception as e:
             self.resposta_card.setText(f'Erro ao conectar ao backend: {e}')
