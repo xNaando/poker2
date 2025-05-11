@@ -4,7 +4,7 @@ import base64
 
 app = Flask(__name__)
 
-OPENROUTER_API_KEY = "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"
+OPENROUTER_API_KEY = "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"
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 MODEL = "meta-llama/llama-4-maverick:free"
 
@@ -28,7 +28,6 @@ def analisar():
     }
     headers = {
         "Authorization": f"Bearer {OPENROUTER_API_KEY}",
-        "HTTP-Referer": "http://localhost",
         "X-Title": "Poker Analyzer"
     }
     response = requests.post(OPENROUTER_URL, json=payload, headers=headers)
