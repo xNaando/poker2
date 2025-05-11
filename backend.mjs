@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 app.use(express.json({ limit: '20mb' }));
 
-const API_KEY = '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'; // nova chave
+const API_KEY = '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'; // nova chave
 
 app.post('/analisar', async (req, res) => {
     try {
