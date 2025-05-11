@@ -1,3 +1,5 @@
 PyQt5
 pywin32
-Pillow 
+Pillow
+Flask
+requests 
