@@ -38,13 +38,15 @@ class App(QWidget):
         self.combo = QComboBox()
         self.btn_atualizar = QPushButton('Atualizar Janelas')
         self.btn_capturar = QPushButton('Capturar Screenshot')
-        self.label_img = QLabel('A imagem aparecerá aqui')
+        self.label_img = QLabel()
         self.label_img.setAlignment(Qt.AlignCenter)
+        self.label_img.setMinimumHeight(400)
+        self.label_img.setStyleSheet('background: #f0f0f0; border: 1px solid #ccc;')
 
         self.layout.addWidget(self.combo)
         self.layout.addWidget(self.btn_atualizar)
         self.layout.addWidget(self.btn_capturar)
-        self.layout.addWidget(self.label_img)
+        self.layout.addWidget(self.label_img, stretch=1)
         self.setLayout(self.layout)
 
         self.btn_atualizar.clicked.connect(self.atualizar_janelas)
